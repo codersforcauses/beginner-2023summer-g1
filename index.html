@@ -18,6 +18,19 @@
             margin-right: 10px;
             cursor: pointer;
         }
+        .container {
+            display: flex;
+            flex-direction: row;
+        }
+        .startbutton {
+    font-size: 24px; /* Increase font size */
+    padding: 10px 20px; /* Add padding to increase button size */
+    border-radius: 8px; /* Round corners for a better visual effect */
+    background-color: #3498db; /* Change background color */
+    color: white; /* Change text color */
+    border: none; /* Remove border */
+    cursor: pointer;
+}
         </style>
     <body>
         <h1>COUNTDOWN</h1>
@@ -25,18 +38,15 @@
         <p>Each player has thirty seconds to try and reach the target number using any or all of the six numbers just once by means of any combination of addition, subtraction, multiplication and division. After the thirty seconds has elapsed the players declare how close they got to the target score.</p>
         <script src="/main.js"></script>
     </body>
-    <h1> Click to start</h1>
     <div id="start">
-        <button onclick="start()">Click to start</button>
+        <button onclick="start()" class="startbutton">Click to start</button>
     </div>
     <body>
         <p>Goal: X</p>
         <p>*6 generated numbers </p>
+        <div>
         <textarea id="progress" rows="4" cols="50">Optional workplace. Type your progress here
             </textarea>
-            
-    </body>
-    <body>
         <img src="https://play-lh.googleusercontent.com/_1oidTAurnfNm6lLrzweJwh873uP12fOlyYJwYIPH4vjtAkMiSgYFsgrfSi6jBRuFAY=w480-h960-rw" alt="countdownclock" style="width: 100px; height: auto;">
         <h1>Choose large number</h1>
         <p>Decide how many large numbers you want, or use "Random" mode, then see if you can solve the generated game before your 30s are up.</p>
@@ -50,7 +60,6 @@
         <div id="solution">
             <button onclick="showsolution()">Show solution</button>
         </div>
-
     </body>
 
 </html>
