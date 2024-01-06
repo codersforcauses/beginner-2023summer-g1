@@ -24,7 +24,22 @@ function generateNumbers(large) {
     }
     updateGeneratedNumbers(randomNumbers);
 }
+function startTimer(){
+    let timeLeft = 30; // time in seconds
+    let timerElement = document.getElementById("timer");
+
+    let timerId = setInterval(function() {
+        if (timeLeft > 0) {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+        } else {
+            clearInterval(timerId);
+            alert("Time's up!");
+        }
+    }, 1000);
+}
 function generateTarget(){
+    startTimer();
     // Generate a random number between 1 and 999 (common range for Countdown)
     var randomNumber = Math.floor(Math.random() * 999) + 1;
 
