@@ -31,9 +31,8 @@
     </div>
     <body>
         <p>Goal: X</p>
-        <p>*6 generated numbers </p>
-        <textarea id="progress" rows="4" cols="50">Optional workplace. Type your progress here
-            </textarea>
+        <p id="generatedNumbers">6 generated numbers: </p>
+        <textarea> id="progress" rows="4" cols="50">Optional workplace. Type your progress here</textarea>
             
     </body>
     <body>
@@ -41,15 +40,16 @@
         <h1>Choose large number</h1>
         <p>Decide how many large numbers you want, or use "Random" mode, then see if you can solve the generated game before your 30s are up.</p>
         <div id="numberList">
-            <button onclick="handleNumber(1)">1</button>
-            <button onclick="handleNumber(2)">2</button>
-            <button onclick="handleNumber(3)">3</button>
-            <button onclick="handleNumber(4)">4</button>
+            <button onclick="generateNumbers(1)">1</button>
+            <button onclick="generateNumbers(2)">2</button>
+            <button onclick="generateNumbers(3)">3</button>
+            <button onclick="generateNumbers(4)">4</button>
             <button onclick="handleRandom()">Random</button>
         </div>
         <div id="solution">
             <button onclick="showsolution()">Show solution</button>
         </div>
+        <script src="main.js"></script>
 
     </body>
 
